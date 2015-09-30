@@ -2,9 +2,9 @@ var express = require('express');
 
 var app = express();
 
-io = require('socket.io').listen(server)
+io = require('socket.io').listen(server);
 
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
 app.use(express.static((__dirname + '/public')));
@@ -17,6 +17,6 @@ require('./server/config/routes.js')(app);
 require('./server/config/socketRoutes.js')(io);
 // testing
 
-app.listen(8000, function(){
+var server= app.listen(8000, function(){
 	console.log('Connected to port 8000');
 })
