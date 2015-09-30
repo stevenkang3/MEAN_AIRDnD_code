@@ -1,0 +1,133 @@
+*{
+    outline: 1px dotted red;
+}
+
+body{
+    background-image: url("http://www.viralthread.com/wp-content/uploads/2015/06/843.jpg");
+    background-size: 100% 70%;
+    background-repeat: no-repeat;
+}
+
+div.container{
+    width:1200px;
+    min-height: 700px;
+}
+
+div.head{
+    height: 60px;
+    width: 100%;
+    background-color: black;
+}
+
+div.login{
+    display: inline-block;
+}
+#ldiners, #lchefs{
+    display: inline-block;
+    float: right;
+    border-radius: 24px;
+    margin-left: 15px;
+    position: relative;
+    right: 220px;
+    top: 15px;
+}
+.slogan{
+    font-size: 70px;
+    font-family: gill sans;
+}
+.slogan2{
+    font-size: 50px;
+    font-family: gill sans;
+}
+.slogan, .slogan2{
+    color: #585858;
+    text-align: center;
+}
+#rdiners, #rchefs{
+    display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 10px;
+
+  padding: 14px 24px;
+    border: 2px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    left:420px;
+}
+
+.btn-lg {
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #3276b1;
+  border-color: #285e8e;
+}
+
+.btn.outline {
+    background: none;
+    padding: 12px 22px;
+}
+.btn-primary.outline {
+    border: 2px solid #0099cc;
+    color: #0099cc;
+}
+.btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
+    color: #33a6cc;
+    border-color: #33a6cc;
+}
+.btn-primary.outline:active, .btn-primary.outline.active {
+    border-color: #007299;
+    color: #007299;
+    box-shadow: none;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+.slogan{
+margin-top: 100px;
+}
+div.main{
+    width:1200px;
+    height: 700px;
+    position: relative;
+    right: 15px;
+}
+
+div.desc1{
+    width:1200px;
+    height: 700px;
+    position: relative;
+    right: 15px;
+}
