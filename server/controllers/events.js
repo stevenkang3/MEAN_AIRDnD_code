@@ -7,7 +7,13 @@ module.exports = (function(){
 				if(err) { return response.json(false); }
 				else { return response.json(records); }
 			})
-		}.
+		},
+		getOne: function(request, response){
+			Event.findOne({_id: request.params.id}, function(err, record){
+				if(err) { return response.json(false); }
+				else { return response.json(record); }
+			})
+		}
 		create: function(request, response){
 			var newEvent = new Event({
 					id: request.body.id,
@@ -18,12 +24,12 @@ module.exports = (function(){
 					guests: request.body.guests,
 					menu: request.body.menu,
 					specialty: request.body.specialty
-			})
+			});
 			newEvent.save(function(err){
 				if(err) { return response.json(false); }
 				else { return response.json(true); }
 			})
-		}
+		},
 		destroy: function(request, response){
 			Event.remove({_id: request.params.id}, function(err){
 				if(err) { return response.json(false); }

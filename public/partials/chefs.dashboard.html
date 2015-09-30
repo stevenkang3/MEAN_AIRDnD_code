@@ -3,14 +3,21 @@
 	
 	<div class="container">
 		<form>
-			<p>Bio: <textarea ng-model='chefInfo.bio' rows='10' cols='50'></textarea></p>
-			<p>Location: <input type='text' ng-model='chefInfo.location' required/></p>
-			<input type='submit' class='btn btn-success' value='Save Changes' ng-click='' />
+			<p>Your Profile Biography:</p>
+			<p><textarea ng-model='chefInfo.bio' rows='10' cols='100'>{{ ChefCtrl.bio }}</textarea></p>
+			<p>Location:</p>
+			<p><input type='text' ng-model='chefInfo.location' value='{{ ChefCtrl.location }}' required/></p>
+			<input type='submit' class='btn btn-success' value='Save Changes' ng-click='ChefCtrl.updateInfo(chefInfo)' />
 		</form>
 
-		<a class='btn btn-danger' href='#/new'>Create New Event</a>
+		<h2>Your upcoming events</h2>
+		<div class="container">
+			<div class='eventList' ng-repeat='event in ChefCtrl.events | orderBy: "date"'>
 
-		
+			</div>
+		</div>
+
+		<a class='btn btn-danger' href='#/new'>Create New Event</a>
 
 	</div>
 </div>

@@ -7,8 +7,10 @@ io = require('socket.io').listen(server)
 var bodyParser = require('body-parser')
 app.use(bodyParser.json());
 
-app.use(express.static((__dirname + '/public')));
+var session = require('express-session');
+app.use(session({secret: airdnd}));
 
+app.use(express.static((__dirname + '/public')));
 
 require('./server/config/mongoose.js');
 
