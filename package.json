@@ -1,10 +1,12 @@
 {
-	"dependencies":{
-		"express": 				"latest",
-		"body-parser": 			"latest",
-		"mongoose": 			"latest",
-		"mongoose-validator": 	"latest",
-		"socket.io": 			"latest",
-		"mysql": 				"latest"
-	}
+  "dependencies": {
+    "body-parser":          "latest",
+    "express":              "latest",
+    "express-session":      "latest",
+    "mongoose":             "latest",
+    "mongoose-validator":   "latest",
+    "mysql":                "latest",
+    "passport-local":       "latest",
+    "socket.io":            "latest"
+  }
 }

@@ -13,7 +13,7 @@ module.exports = (function(){
 				if(err) { return response.json(false); }
 				else { return response.json(record); }
 			})
-		}
+		},
 		create: function(request, response){
 			var newEvent = new Event({
 					id: request.body.id,

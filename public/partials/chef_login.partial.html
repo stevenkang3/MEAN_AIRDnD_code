@@ -13,15 +13,15 @@
                 <div class='chef_reg'>
                     <h2>Chef Login</h2>
                         <p>Not a member? Register <a href="">here</a></p>
-                    <form>
+                    <form action='/chefLogin' method='post'>
                             <div class='form-group'>
                                 <label>Email: </label>
-                                <input type='text' class='form-control' style='width: 300px;'>
+                                <input type='text' class='form-control' name='email' style='width: 300px;'>
                             </div>
                             
                             <div class='form-group'>
                                 <label>Password: </label>
-                                <input type='password' class='form-control' style='width: 300px;'>
+                                <input type='password' class='form-control' name='password' style='width: 300px;'>
                                 
                             </div>
                                 <input class='btn btn-success' type='submit' value='Login'>
