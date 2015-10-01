@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="./css/index_style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <title>Air D&D</title>
+    <script type="text/javascript">
+    </script>
+</head>
+<body>
+    <div class='head'>
+            <form class='login'>
+<<<<<<< HEAD
+=======
+                <button id='ldiners' class= 'btn btn-success'><a href="diner_login"></a>Login Diner</button>
+                <button id='lchefs' class="btn btn-success"><a href="chef_login"></a>Login Chef</button>
+>>>>>>> e9e34a5fd38ad7e9075bf37cc99b1844cf9055bb
+                <button id='ldiners' class= 'btn btn-success'><a href="#/diner_login"></a>Login Diner</button>
+                <button id='lchefs' class="btn btn-success"><a href="#/chef_login"></a>Login Chef</button>
+            </form>
+        </div>
+    <div class='container'>
+        <div class='main'>
+            <h1 class= 'slogan'>Come Home for Dinner</h1>
+            <h2 class='slogan2'>New tastes served locally</h1>
+<<<<<<< HEAD
+            <button id='rdiners' class= 'btn btn-primary btn-lg outline'><a href="#/diner_registration"></a>Register Diner</button>
+            <button id='rchefs' class="btn btn-primary btn-lg outline"><a href="#/chef_registration"></a>Register Chef</button>
+=======
+            <button id='rdiners' class= 'btn btn-primary btn-lg outline'><a href="/diner_registration"></a>Register Diner</button>
+            <button id='rchefs' class="btn btn-primary btn-lg outline"><a href="/chef_registration"></a>Register Chef</button>
+>>>>>>> e9e34a5fd38ad7e9075bf37cc99b1844cf9055bb
+        </div>
+        <div class='desc1'>
+
+        </div>
+        <div class='desc2'>
+
+        </div>
+
+    </div>
+</body>
+</html>

@@ -34,14 +34,18 @@ div.login{
 .slogan{
     font-size: 70px;
     font-family: gill sans;
+
+
 }
 .slogan2{
     font-size: 50px;
     font-family: gill sans;
 }
 .slogan, .slogan2{
-    color: #585858;
+    color: white;
     text-align: center;
+    position: relative;
+    top:200px;
 }
 #rdiners, #rchefs{
     display: inline-block;
