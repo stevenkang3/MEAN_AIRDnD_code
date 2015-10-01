@@ -1,15 +1,20 @@
+
+
 var express = require('express');
 var app = express();
-var server = app.listen(8000);
+var server = app.listen(8000, function(){
+	console.log('Connected to port 8000');
+})
 
 // Sockets
 io = require('socket.io').listen(server)
 
 // Body Parser
 var bodyParser = require('body-parser')
+
+var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
-// var filter = require('angular-filter')
 // Session
 var session = require('express-session')
 app.use(session({
