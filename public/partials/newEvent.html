@@ -1,4 +1,38 @@
-<div>
+<div class='container'>
+  <div class='add'>
+<a href="./#/chef">Back to Mainpage</a>
+
+<h3 class="col-xs-5">Create Event</h3>​
+<!-- ​<div class='error' ng-model='errors'>{{error.error}}</div> -->
+<div ng-controller="ChefController as newChefCtrl">
+  <div class='error' ng-bind='newAppCtrl.errors'>{{errors}}</div>
+    ​<div class="row">​
+    <form class="form-horizontal" role="form">​
+      <div class="form-group">​
+        Chef Name: <input type="text"  ng-model='newEvent.name'></input><br><br>
+        Cusine Type: <input type="text" ng-model='newEvent.cusine' value="" ><br><br>
+        Location: <input type="text" ng-model='newEvent.location' value="" ><br><br>
+        Number of Guest: <input text="number" ng-model='newEvent.guest' value=""><br><br>
+        URL: <input type='text' ng-model='newEvent.url' value='' ><br><br>
+        Profile Pic: <input type='text' ng-model='newEvent.pic' value='' ><br><br>
+        Event Title: <input type='text' ng-model='newEvent.title' value='' ><br><br>
+        Event Date: <input type='date' ng-model='newEvent.date' value='' ><br><br>
+        Event Time:<input type='time' ng-model='newEvent.time' value='' ><br><br>
+        Price(per person): <input type='number' ng-model='newEvent.price' value='' ><br><br>
+        Event Description: <textarea ng-model='newEvent.description' rows="8" cols="40" required></textarea><br><br>
+        Duration:<input type='number' ng-model='newEvent.duration' placeholder='ex: 3' ><br><br>
+        Menu: <textarea ng-model='newEvent.menu' rows="8" cols="40"></textarea><br><br>
+
+        <button type="submit" class="btn btn-success" ng-click="newChefCtrl.addEvent(newEvent);">Create Event</button>​​
+            <a href="./#/chef">Cancel</a>
+        </div>​
+        </form>​
+      </div>
+</div>      ​
+</div>
+</div>
+
+<!-- <div>
 	<h1>Create a New Event</h1>
 	<div class='container'>
 		<form>
@@ -9,7 +43,7 @@
 			<p>Number of guests: <input type='number' ng-model='newEvent.guests' min='1' required/></p>
 			<p>Menu:</p>
 			<p><textarea rows='8' cols='40' ng-model='newEvent.menu'></textarea></p>
-			<p>Cuisine: 
+			<p>Cuisine:
 				<select ng-model='newEvent.specialty'>
 					<option>American</option>
 					<option>Asian</option>
@@ -23,4 +57,4 @@
 			<input type='submit' class='btn btn-primary' value='Submit' ng-click='' />
 		</form>
 	</div>
-</div>
+</div> -->

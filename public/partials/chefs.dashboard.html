@@ -1,6 +1,6 @@
 <div>
 	<h1>Welcome</h1>
-	
+
 	<div class="container">
 		<form>
 			<p>Your Profile Biography:</p>
@@ -13,7 +13,13 @@
 		<h2>Your upcoming events</h2>
 		<div class="container">
 			<div class='eventList' ng-repeat='event in ChefCtrl.events | orderBy: "date"'>
-
+				<div class='col-md-4'>
+				<div class='row'>
+					<!-- <h5 class='name'>Chef {{app.name}}</h5> -->
+					<img class='art' src="{{app.url}}" alt="" />
+					<h4><a href="#">{{app.title}}: {{app.cusine}} / ${{app.price}}</a><h6>{{app.date | date:'mediumDate'}} at {{event.time | date: 'shortTime'}}</h6></h4>
+				</div>
+				</div>
 			</div>
 		</div>
 

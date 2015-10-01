@@ -6,9 +6,11 @@ var ChefSchema = new mongoose.Schema({
 	email: { type: String },
 	password: { type: String },
 	bio: { type: String },
+	pic:  {type: String},
 	location: { type: String },
 	events: { type: Array },
-	reviews: { type: Array }
+	reviews: { type: Array },
+
 });
 
 mongoose.model('Chef', ChefSchema);
