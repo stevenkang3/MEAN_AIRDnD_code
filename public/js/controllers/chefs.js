@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var myApp = angular.module('chefApp', ['ngRoute']);
 
         myApp.factory('CustomerFactory', function($http){
@@ -32,3 +33,21 @@ var myApp = angular.module('chefApp', ['ngRoute']);
 
             return factory;
         })
+=======
+myApp.controller('ChefController', function(ChefFactory, EventFactory, $location){
+	var that = this;
+
+	this.updateInfo = function(chefInfo){
+		ChefFactory.updateInfo(chefInfo, function(response){
+
+		})
+	}
+
+	this.addEvent = function(newEvent){
+		EventFactory.addEvent(newEvent, function(response){
+			if(response == true)
+				$location.path('');
+		})
+	}
+})
+>>>>>>> 1f4920ee34b26e932f9d402d95d13a716597cc7d

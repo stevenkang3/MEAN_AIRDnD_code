@@ -1,7 +1,7 @@
 mongoose = require('mongoose');
 var fs = require('fs');
 
-mongoose.connect('mongodb://localhost/MEANblackbelt');
+mongoose.connect('mongodb://localhost/AirDND');
 
 var models_path = __dirname + '/../models';
 

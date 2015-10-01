@@ -1,0 +1,26 @@
+<div>
+	<h1>Create a New Event</h1>
+	<div class='container'>
+		<form>
+			<p>Name of the Event: <input type='text' ng-model='newEvent.name' required/></p>
+			<p>Location: <input type='text' ng-model='newEvent.location' required/></p>
+			<p>Date: <input type='datetime-local' ng-model='newEvent.date' required/></p>
+			<p>Price(per person): $<input type='number' ng-model='newEvent.price' min='0' required/></p>
+			<p>Number of guests: <input type='number' ng-model='newEvent.guests' min='1' required/></p>
+			<p>Menu:</p>
+			<p><textarea rows='8' cols='40' ng-model='newEvent.menu'></textarea></p>
+			<p>Cuisine: 
+				<select ng-model='newEvent.specialty'>
+					<option>American</option>
+					<option>Asian</option>
+					<option>Fusion</option>
+					<option>Italian</option>
+					<option>Mexican</option>
+					<option>Other</option>
+				</select>
+			</p>
+			<a class='btn btn-link' href='#/'>Cancel</a>
+			<input type='submit' class='btn btn-primary' value='Submit' ng-click='' />
+		</form>
+	</div>
+</div>

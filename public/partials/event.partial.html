@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <title>Air D&D</title>
+    <script type="text/javascript">
+    </script>
+</head>
+<body>
+    <style>
+    *{
+        outline: 1px dotted red;
+    }
+    div.container{
+        width:1200px;
+        min-height: 900px;
+    }
+    div.top_bar{
+        height: 60px;
+        width: 100%;
+        background-color: black;
+    }
+    #leave{
+        display: inline-block;
+        float: right;
+        border-radius: 24px;
+        margin-left: 15px;
+        position: relative;
+        right: 220px;
+        top: 15px;
+    }
+    .head_pic{
+        height: 180px;
+        width: 100%;
+    }
+    .left_bar{
+        margin: 10px;
+        padding: 10px;
+        width: 270px;
+        height: 650px;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .content{
+        margin: 10px;
+        padding: 10px;
+        width: 850px;
+        height: 650px;
+        display: inline-block;
+    }
+    .chef_pic{
+        width: 240px;
+        height: 220px;
+        margin-left: 5px;
+        margin-top: 5px;
+        outline: 2px solid black
+    }
+    .chef_info{
+        width: 240px;
+        height: 320px;
+        margin-left: 5px;
+        margin-top: 30px;
+        outline: 2px solid black;
+    }
+    .chef_info h3{
+        text-align: center;
+        padding-top:10px; 
+        color: white;       
+    }
+    .chef_info h4{
+        margin-top: 15px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .chef_info p{
+        margin-top: 10px;
+        display: inline-block;
+        margin-left: 40px;
+    }
+    .chef_block{
+        background-color: black;
+        height:46px;
+        width: 240px;
+    }
+    .name_block, .location_block, .specialty_block{
+        background-color: lightgray;
+        height: 30px;
+        width: 240px;
+    }
+    .event_detail, .event_detail h3{
+        height: 50px;
+        width: 850px;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .event_detail{
+        position: relative;
+        right: 10px;
+        bottom: 10px;
+        background-color: black;
+    }
+    .event_detail h3{
+        color: white;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    .event_pic{
+        width: 400px;
+        height: 250px;
+        float: right;
+        margin-top: 7px;
+        margin-right: 5px;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .event_info{
+        width: 400px;
+        height: 250px;
+        margin-top: 7px;
+        margin-left: 5px;
+        display: inline-block;
+        vertical-align: top;
+        padding: 10px;
+    }
+    .event_info h5{
+        margin-left: 25px;
+    }
+    .event_price{
+        width: 400px;
+        height: 250px;
+        margin-top: 7px;
+        margin-left: 5px;
+        display: inline-block;
+        vertical-align: top;
+        padding: 10px;
+        text-align: center;
+    }
+    .event_price h1{
+        font-size: 60px;
+    }
+    .event_price h6{
+        font-size: 24px;
+    }
+    .event_capacity{
+        width: 400px;
+        height: 250px;
+        float: right;
+        margin-top: 7px;
+        margin-right: 5px;
+        display: inline-block;
+        vertical-align: top;
+    }
+    </style>
+    <div>
+        <div class='top_bar'>
+            <button id='leave' class= 'btn btn-success'><a href="#/"></a>Logout</button>
+        </div>
+    
+        <div class="container">
+            <div class='head_pic'>
+                <img src="http://images4.mtv.com/uri/mgid:uma:video:mtv.com:741407?width=657&height=370&crop=true&quality=0.85" width='100%' height='100%'>
+            <div>
+
+            <div class='left_bar'>
+                <div class='chef_pic'>
+                    <img src="">
+                </div>
+                <div class='chef_info'>
+                    <div class='chef_block'>
+                        <h3>Meet Your Chef!</h3>
+                    </div>
+                        <div class='name_block'>
+                            <h4>Chef Name:</h4>
+                        </div>
+                            <p>put name here</p>
+                        <div class='location_block'>
+                            <h4>Chef Location:</h4>
+                        </div>
+                            <p>put location here</p>
+                        <div class='specialty_block'>
+                            <h4>Chef Specialty:</h4>
+                        </div>
+                            <p>put specialty here</p>
+                </div>
+            </div>
+
+            <div class='content'>
+                <div class='event_detail'>
+                    <h3>Event Details</h3>
+                </div>
+                <div class='event_info'>
+                    <h4>Date:</h4>
+                        <h5>date here</h5>
+                    <h4>Location:</h4>
+                        <h5>location here</h5>
+                    <h4>Menu Item:</h4>
+                        <h5>menu here</h5>
+                </div>
+                <div class='event_pic'>
+                    <img src="">
+                </div>
+                <div class ='event_price'>
+                    <h1> $90 </h1>
+                    <h6>/per guest</h6>
+                </div>
+                <div class='event_capacity'>
+                    <h4>People Going</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
