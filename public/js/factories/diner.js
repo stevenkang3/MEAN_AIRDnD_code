@@ -1,24 +1,31 @@
-app.controller('DinerController', function(DinerFactory, $location){
-	var that = this;
+app.factory('DinerFactory', function($http){
+  var factory = {};
+  factory.user = {};
 
-	// this.updateInfo = function(chefInfo){
-	// 	ChefFactory.updateInfo(chefInfo, function(response){
-  //
-	// 	})
-	// }
 
-	this.addDiner = function(newDiner){
-    console.log(newDiner);
-		DinerFactory.addDiner(newDiner, function(response){
-      console.log('con',response);
-			if(response == true){
-        console.log('true');
-				$location.path('/main');
-      }
-      else{
-        console.log('not sent');
-      }
-		})
-	}
+factory.addDiner = function(newDiner, callback) {
+  console.log('fac',newDiner);
+  $http.post('/diner', newDiner).success(function(response){
+    callback(response);
+  })
+}
 
+factory.logDiner = function(diner, callback) {
+  console.log('fact',diner);
+  $http.post('/logdiner', diner).success(function(response){
+    callback(response);
+  })
+}
+
+factory.setUser = function(user){
+    this.user = user;
+  },
+
+factory.getDiner = function(callback) {
+  $http.get('/getDiner').success(function(response){
+    diner = response;
+    callback(response);
+  })
+}
+return factory;
 });

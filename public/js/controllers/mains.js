@@ -3,7 +3,7 @@ app.controller('AppsController', function($scope, AppsFactory) {
 var that = this;
 
 // while(counter<1){
-//   name = prompt('Please enter your name to sign in');
+//   name = prompt('Please enter your name to make an appointment');
 //     if(name){
 //       AppsFactory.setUser(name);
 //       counter ++;
@@ -25,12 +25,12 @@ function getLocation(){
 }
 getLocation();
 
-function getCusine(){
-  AppsFactory.getCusine(function(cusine){
-    that.cusine = cusine;
+function getCuisine(){
+  AppsFactory.getCuisine(function(cuisine){
+    that.cuisine = cuisine;
   })
 }
-getCusine();
+getCuisine();
 
 function getChef(){
   AppsFactory.getChef(function(chef){
@@ -53,18 +53,26 @@ function getApps(){
 }
 getApps();
 
-// this.addApp = function(newApp) {
-//   AppsFactory.addApp(newApp, function(response){
-//     $scope.errors = response;
-//     getApps();
-//   })
-// }
+socket.on('updateAll', function(){
+  getApps();
+  // getLocation();
+  // getCuisine();
+  // getChef();
+})
+
+this.addApp = function(newApp) {
+  AppsFactory.addApp(newApp, function(response){
+    $scope.errors = response;
+    getApps();
+  })
+}
 
 this.reset = function(){
   $scope.search = {};
 }
 
 this.destroyApp = function(appointment){
+
   AppsFactory.destroyApp(appointment, function(){
     getApps();
   })
@@ -73,4 +81,8 @@ this.destroyApp = function(appointment){
 this.logOut = function(){
       counter = 0;
   }
+
+
+
+
 });

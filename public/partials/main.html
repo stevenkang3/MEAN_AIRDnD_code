@@ -1,7 +1,16 @@
+<style media="screen">
+  body{
+    background-image: url();
+  }
+  .art {
+    height: 245px;
+    width: 409px;
+  }
+</style>
 <nav class="navbar navbar-inverse" id='navigation' role='navigation'>
   <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#"><div class='row'><h3 id='diner'>Welcome <span ng-bind='appCtrl.name'></span></h3></div></a>
+    <div class="navbar-header" ng-controller='ChefController as chefCtrl'>
+      <a class="navbar-brand" href="#"><div class='row'><h3 id='diner'>Welcome <span>{{chefCtrl.chef.first_name}}</span></h3></div></a>
     </div>
     <div>
       <ul id='list' class="nav navbar-nav">
@@ -9,8 +18,8 @@
         <li class='list'><a href=''><input ng-model="search.$" class="glyphicon glyphicon-star" placeholder=' Search'><button type='button' class='btn btn-xs btn-primary'>Filter</button></a></li>
         <li class='list'><a href=""><label>Chef: <select ng-model="search.name" >
 						<option ng-repeat='chef in appCtrl.chef' ng-bind='chef'>{{chef}}</option></select></label></a></li>
-        <li class='list'><a href=""><label>Cusine Type: <select  ng-model="search.cusine" >
-					<option ng-repeat='cusine in appCtrl.cusine' ng-bind='cusine'>{{cusine}}</option>
+        <li class='list'><a href=""><label>Cuisine Type: <select  ng-model="search.cuisine" >
+					<option ng-repeat='cuisine in appCtrl.cuisine' ng-bind='cuisine'>{{cuisine}}</option>
 				</select></label></a></li>
         <li class='list'><a href="">	<label>Location: <select ng-model="search.location">
 							<option ng-repeat='location in appCtrl.location' ng-bind='location'>{{location}}</option><select></label></a></li>
@@ -20,14 +29,14 @@
   </div>
 </nav>
 
-		<a class='col-xs-4 pull-right' href="./#/new_app">Add New Event</a>​
+		<!-- <a class='col-xs-4 pull-right' href="./#/new_app">Add New Event</a>​ -->
 <div class='container'>
 	<div class='intro' ng-repeat="app in appCtrl.apps | filter: search:strict | orderBy: 'date'">
 	   <div class='col-md-4'>
 	      <div class='row'>
     		<h5>Creations of: <a class='name'>Chef {{app.name}}</a></h5>
     		<img class='art' src="{{app.url}}" alt="" />
-    		<h4><a href="#">{{app.title}}: {{app.cusine}} / ${{app.price}}</a><h6>{{app.date | date:'mediumDate'}} at {{app.time | date: 'shortTime'}}</h6></h4>
+    		<h4><a class='bname' href="#/one_event/{{app._id}}">{{app.title}}: {{app.cuisine}} / ${{app.price}}</a><h6>{{app.date | date:'mediumDate'}} at {{app.time | date: 'shortTime'}}</h6></h4>
 	 </div>
 	 </div>
 	</div>

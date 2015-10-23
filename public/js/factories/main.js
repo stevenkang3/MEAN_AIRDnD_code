@@ -18,8 +18,8 @@ app.factory('AppsFactory', function($http){
       callback(response);
     })
   }
-  factory.getCusine = function(callback){
-    $http.get('/cusine').success(function(response){
+  factory.getCuisine = function(callback){
+    $http.get('/cuisine').success(function(response){
       callback(response);
     })
   }
@@ -28,11 +28,11 @@ app.factory('AppsFactory', function($http){
       callback(response);
     })
   }
-  // factory.addApp = function(newApp, callback) {
-  //   $http.post('/apps', newApp).success(function(response){
-  //     callback(response.error);
-  //   })
-  // }
+  factory.addApp = function(newApp, callback) {
+    $http.post('/apps', newApp).success(function(response){
+      callback(response.error);
+    })
+  }
 
     factory.destroyApp = function(appointment, callback){
     $http.delete('/apps/'+ appointment._id).success(function(response){

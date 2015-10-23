@@ -1,53 +1,77 @@
-<<<<<<< HEAD
-var myApp = angular.module('chefApp', ['ngRoute']);
+app.controller('ChefController', function(ChefFactory, EventFactory, $location, $routeParams){
 
-        myApp.factory('CustomerFactory', function($http){
-            var factory = {}
-            var error = false;
+    var that = this;
+    save = false;
 
-            factory.getAll = function(callback){
-                $http.get('/customers').success(function(response){
-                    callback(response);
-                })
-            }
+    console.log('loading controller');
+		console.log($routeParams.id);
 
-            factory.add = function(newCustomer, callback){
-                $http.post('/customers', newCustomer).success(function(response){
-                    if(response)
-                        error = false;
-                    else
-                        error = true;
-                    callback();
-                })
-            }
-
-            factory.getError = function(){
-                return error;
-            }
-
-            factory.destroy = function(customer, callback){
-                $http.delete('/customers/' + customer._id).success(function(response){
-                    callback(response);
-                })
-            }
-
-            return factory;
+    function getChefInfo() {
+        ChefFactory.chefInfo(function(response){
+            that.chef = response;
         })
-=======
-myApp.controller('ChefController', function(ChefFactory, EventFactory, $location){
-	var that = this;
+    }
 
-	this.updateInfo = function(chefInfo){
-		ChefFactory.updateInfo(chefInfo, function(response){
+		function getChefEvents(){
+        EventFactory.getChefEvents(function(response){
+            console.log('chef controller', response);
+            that.events = response;
+        })
+    }
 
-		})
-	}
+		function getOne($routeParams){
+			EventFactory.getOneEvent($routeParams, function(response){
+				that.event = response;
+				// console.log(response);
+			})
+		}
+		if($routeParams){
+		getOne($routeParams);
+		}
 
-	this.addEvent = function(newEvent){
-		EventFactory.addEvent(newEvent, function(response){
-			if(response == true)
-				$location.path('');
-		})
-	}
+    this.addChef = function(newChef){
+        ChefFactory.addNewChef(newChef, function(response){
+            $location.path('/chef_dashboard')
+        })
+    }
+
+    this.loginChef = function(chef){
+        ChefFactory.loginChef(chef, function(response){
+            $location.path('/chef_dashboard')
+        })
+    }
+
+    this.updateInfo = function(chefInfo){
+        console.log("in the chef controller:", chefInfo)
+        ChefFactory.updateInfo(chefInfo, function(response){
+            that.save = true;
+            getChefInfo();
+        })
+    }
+
+    this.updateEvent = function(eventinfo){
+      console.log(eventinfo)
+      EventFactory.updateEvent(eventinfo, function(response){
+        	console.log('ccccoooo',response);
+          $location.path('/chef_dashboard')
+      })
+    }
+
+    this.addEvent = function(newEvent){
+        EventFactory.addEvent(newEvent, function(response){
+            if(response == true)
+                $location.path('/chef_dashboard');
+            getChefEvents();
+        })
+    }
+
+    this.destroy = function(event){
+      EventFactory.destroy(event, function(response){
+        console.log(response);
+      })
+    }
+
+    getChefInfo();
+    getChefEvents();
+
 })
->>>>>>> 1f4920ee34b26e932f9d402d95d13a716597cc7d

@@ -6,7 +6,6 @@
     "mongoose":             "latest",
     "mongoose-validator":   "latest",
     "mysql":                "latest",
-    "passport-local":       "latest",
     "socket.io":            "latest"
   }
 }

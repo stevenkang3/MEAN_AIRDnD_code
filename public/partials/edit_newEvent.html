@@ -75,27 +75,28 @@ div.okay{
 
 <form class="form-horizontal" role="form">​
     <div class="form-group">​
-        <p>Event Title: <input type='text' ng-model='newEvent.title' required/></p>
-        <p>Chef Name: <input type='text' ng-model='newEvent.name' required/></p>
-        <p>Cuisine Type: <input type="text" ng-model='newEvent.cuisine' required/></p>
-        <p>Event Date: <input type='date' ng-model='newEvent.date' required/></p>
-        <p>Event Time: <input type='time' ng-model='newEvent.time' required/></p>
-        <p>Location: <input type="text" ng-model='newEvent.location' required/></p>
-        <p>Number of Guests: <input text="number" ng-model='newEvent.guests' required/></p>
-        <p>Price(per person): $<input type='number' ng-model='newEvent.price' required/></p>
+        <!-- <input type="hidden" ng-model='chefCtrl.event._id'> -->
+        <p>Event Title: <input type='text' ng-model='chefCtrl.event.title' required/></p>
+        <p>Chef Name: <input type='text' ng-model='chefCtrl.event.name' required/></p>
+        <p>Cuisine Type: <input type="text" ng-model='chefCtrl.event.cuisine' required/></p>
+        <p>Event Date: <input type='date' ng-model='chefCtrl.event.date' required/></p>
+        <p>Event Time: <input type='time' ng-model='chefCtrl.event.time' required/></p>
+        <p>Location: <input type="text" ng-model='chefCtrl.event.location' required/></p>
+        <p>Number of Guests: <input type="number" ng-model='chefCtrl.event.guests' required/></p>
+        <p>Price(per person): $<input type='number' ng-model='chefCtrl.event.price' required/></p>
     </div>
     <div id='part2' class="form-group">​
         <p>Event Description:</p>
-        <p><textarea ng-model='newEvent.description' rows="8" cols="40" required></textarea></p>
+        <p><textarea ng-model='chefCtrl.event.description' rows="8" cols="40" required></textarea></p>
         <p>Menu:</p>
-        <p><textarea ng-model='newEvent.menu' rows="8" cols="40" required/></textarea></p>
-        <p>Duration: <input type='number' ng-model='newEvent.duration' required/></p>
-        <p>Event Pic: <input type='text' ng-model='newEvent.url'></p>
-        <p>Profile Pic: <input type='text' ng-model='newEvent.pic'></p>
+        <p><textarea ng-model='chefCtrl.event.menu' rows="8" cols="40" required/></textarea></p>
+        <p>Duration: <input type='number' ng-model='chefCtrl.event.duration' required/></p>
+        <p>Event Pic: <input type='text' ng-model='chefCtrl.event.url'></p>
+        <p>Profile Pic: <input type='text' ng-model='chefCtrl.event.pic'></p>
     </div>
     <div class='okay'>
-        <a id='linked' href="#/chef_dashboard">Cancel</a>
-        <button id='clicked' type="submit" class="btn btn-success" ng-click="chefCtrl.addEvent(newEvent);">Create Event</button>​​
+      <button class='btn btn-danger'><a href="#/chef_dashboard">Cancel</a></button>
+        <button id='clicked' type="submit" class="btn btn-success" ng-click="chefCtrl.updateEvent(chefCtrl.event);">Create Event</button>​​
     </div>​
 </form>​
 </div>

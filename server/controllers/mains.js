@@ -1,42 +1,44 @@
-var User = mongoose.model('App');
-
+var User = mongoose.model('Event');
+// var Order = mongoose.model('Order');
+// var Product = mongoose.model('Product');
 var errors_array = [];
 module.exports = (function() {
 	return {
 		index: function(request, response){
+			// var location = User.find().distinct('location');
+			// console.log(location);
 			User.find({}, function(err, records){
 				response.json(records);
 			})
 		},
 
 
-		create: function(request, response){
-	      User.find({date: request.body.date}, function(err, records){
-	          var user = new User();
-	          user.guest = request.body.guest;
-	          user.cusine = request.body.cusine;
-	          user.name = request.body.name;
-	          user.description = request.body.description;
-						user.location = request.body.location;
-						user.title = request.body.title;
-						user.date = request.body.date;
-						user.time = request.body.time;
-						user.price = request.body.price;
-						user.url = request.body.url;
-						user.duration = request.body.duration;
-						user.menu = request.body.menu;
-						user.pic = request.body.pic;
-	          user.save(function(err){
-	            if(err){
-	              response.json({status:false, error: err});
-	            }
-	            else{ return response.json({error:'Event Added Succesfully'}); }
-	        })
-	      // }
-	    })
-	    // 	}
-	    // else { return response.json({error: 'Date required!'}); }
-	  },
+		// create: function(request, response){
+		//
+	  //     User.find({date: request.body.date}, function(err, records){
+		//
+	  //         var user = new User();
+	  //         user.guest = request.body.guest;
+	  //         user.cusine = request.body.cusine;
+	  //         user.name = request.body.name;
+	  //         user.description = request.body.description;
+		// 				user.location = request.body.location;
+		// 				user.title = request.body.title;
+		// 				user.date = request.body.date;
+		// 				user.time = request.body.time;
+		// 				user.price = request.body.price;
+		// 				user.url = request.body.url;
+		// 				user.duration = request.body.duration;
+		// 				user.menu = request.body.menu;
+		// 				user.pic = request.body.pic;
+	  //         user.save(function(err){
+	  //           if(err){
+	  //             response.json({status:false, error: err});
+	  //           }
+	  //           else{ return response.json({error:'Event Added Succesfully'}); }
+	  //       })
+	  //   })
+	  // },
 
 		location: function(request, response){
 			User.find().distinct('location', function(err, records){
@@ -44,8 +46,8 @@ module.exports = (function() {
 			})
 		},
 
-		cusine: function(request, response){
-			User.find().distinct('cusine', function(err, records){
+		cuisine: function(request, response){
+			User.find().distinct('cuisine', function(err, records){
 					response.json(records);
 			})
 		},
