@@ -1,104 +1,108 @@
 <style media="screen">
-.covered{
-    background-image: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQYzBCja2SGv3HOO0Rxrotpv7ouWgj6o5Gr9WssMLaObwW5kzlqrw);
-    background-size: 100% 100%;
-}
-div.lastly{
-    height: 800px;
-    width: 1200px;
-    background-color: lightgray;
-    opacity: 0.85;
-    border-radius: 20px;
-    border:2px solid black;
-    padding: 10px;
+
+div.form-group {
+  padding:10px;
+  margin-top: -65px;
 }
 div.upper_bar{
-    height: 60px;
-    width: 100%;
     background-color: black;
+    padding:10px;
+  }
+div.upper_bar{
+    background-color: black;
+    padding:10px;
+    margin-top: -20px;
+    margin-left: -20px;
 }
 #leaver{
-    display: inline-block;
-    float: right;
     border-radius: 24px;
     margin-left: 15px;
-    position: relative;
-    right: 220px;
-    top: 15px;
 }
-div.container{
-    width: 1200px;
-    height: 1000px
+#create{
+  text-align: center;
+  font-family: fantasy;
+  font-size: 40px;
+  color:#660033;
 }
-div.form-group{
-    height: 500px;
-    width: 500px;
-    padding: 10px;
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 60px;
-}
-div.form-group p{
-    margin-left: 100px;
-    margin-top: 30px;
-}
-div.okay{
-    height: 60px;
-    width: 400px;
-    margin-top: 40px;
-    margin-left: 150px;
-}
-#part2{
-    margin-left: 80px;
-    margin-top: -1px;
-}
-#clicked{
-    margin-left: 50px;
-}
-#linked, #clicked{
-    display: inline-block;
-    vertical-align: top;
-}
-#linked{
-    margin-top: 10px;
-}
-
 </style>
-<div class='covered'>
-    <div class='upper_bar'>
-              <button id='leaver' class= 'btn btn-success'><a href="#/">Logout</a></button>
-          </div>
-        <div class='container'>
-<a href="#/chef_dashboard">Back to Mainpage</a>
-<div class='lastly'>
-<h2>Create a New Event</h2>​
 
-<form class="form-horizontal" role="form">​
+
+<div class='container'>
+  <div class='row'>
+  <div class='col-xs-12 col-sm-7 col-md-7 col-lg-7'>
+
+<div class='row'>
+    <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+  <div class='upper_bar'>
+    <button id='leaver' class='btn btn-danger'><a style='color: white;' href="#/">Logout</a></button>
+  </div>
+  <a class='animated shake' href="#/chef_dashboard">Back to Mainpage</a>
+  <h2 id='create'>Update Your Event</h2>​
+</div>
+</div>
+
+  <div class='row'>
+    <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+    <form class="animated lightSpeedIn form-horizontal" role="form">​
     <div class="form-group">​
-        <!-- <input type="hidden" ng-model='chefCtrl.event._id'> -->
-        <p>Event Title: <input type='text' ng-model='chefCtrl.event.title' required/></p>
-        <p>Chef Name: <input type='text' ng-model='chefCtrl.event.name' required/></p>
-        <p>Cuisine Type: <input type="text" ng-model='chefCtrl.event.cuisine' required/></p>
-        <p>Event Date: <input type='date' ng-model='chefCtrl.event.date' required/></p>
-        <p>Event Time: <input type='time' ng-model='chefCtrl.event.time' required/></p>
-        <p>Location: <input type="text" ng-model='chefCtrl.event.location' required/></p>
-        <p>Number of Guests: <input type="number" ng-model='chefCtrl.event.guests' required/></p>
-        <p>Price(per person): $<input type='number' ng-model='chefCtrl.event.price' required/></p>
+    <div class='row'>
+      <div class='col-xs-6'>
+        Event Title: <input class='form-control input-sm' type='text' ng-model='chefCtrl.event.title' required/>
+      </div>
+      <div class='col-xs-6'>
+        Chef Name: <input class='form-control input-sm' type='text' ng-model='chefCtrl.event.name' required/>
+      </div>
     </div>
-    <div id='part2' class="form-group">​
-        <p>Event Description:</p>
-        <p><textarea ng-model='chefCtrl.event.description' rows="8" cols="40" required></textarea></p>
-        <p>Menu:</p>
-        <p><textarea ng-model='chefCtrl.event.menu' rows="8" cols="40" required/></textarea></p>
-        <p>Duration: <input type='number' ng-model='chefCtrl.event.duration' required/></p>
-        <p>Event Pic: <input type='text' ng-model='chefCtrl.event.url'></p>
-        <p>Profile Pic: <input type='text' ng-model='chefCtrl.event.pic'></p>
+
+    <div class='row'>
+      <div class='col-xs-6'>
+        Cuisine Type: <input class='form-control input-sm' type="text" ng-model='chefCtrl.event.cuisine' required/>
+      </div>
+      <div class='col-xs-6'>
+        Location: <input class='form-control input-sm' type="text" ng-model='chefCtrl.event.location' required/>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='col-xs-6'>
+        Event Date: <input class='form-control input-sm' type='date' ng-model='chefCtrl.event.date' required/>
+      </div>
+      <div class='col-xs-6'>
+        Event Time: <input class='form-control input-sm' type='time' ng-model='chefCtrl.event.time' required/>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-xs-4'>
+        Capacity: <input class='form-control input-sm' type="number" ng-model='chefCtrl.event.guests' required/>
+      </div>
+      <div class='col-xs-4'>
+        $/person<input class='form-control input-sm' type='number' ng-model='chefCtrl.event.price' required/>
+      </div>
+      <div class='col-xs-4'>
+        Duration: <input type='number' class='form-control input-sm' ng-model='chefCtrl.event.duration' required/>
+      </div>
+    </div>
+    Event Description:
+    <textarea class='form-control input-sm' ng-model='chefCtrl.event.description' rows="4" cols="40" required></textarea>
+    Menu:
+    <textarea class='form-control input-sm' ng-model='chefCtrl.event.menu' rows="4" cols="40" required/></textarea>
+
+    <div class='row'>
+      <div class='col-xs-6'>
+        Event Pic: <input class='form-control input-sm' type='text' ng-model='chefCtrl.event.url'>
+      </div>
+      <div class='col-xs-6'>
+        Profile Pic: <input class='form-control input-sm' type='text' ng-model='chefCtrl.event.pic'>
+      </div>
     </div>
     <div class='okay'>
-      <button class='btn btn-danger'><a href="#/chef_dashboard">Cancel</a></button>
-        <button id='clicked' type="submit" class="btn btn-success" ng-click="chefCtrl.updateEvent(chefCtrl.event);">Create Event</button>​​
+      <button class='btn btn-danger'><a style='color:white'href="#/chef_dashboard">Cancel</a></button>
+      <button id='clicked' type="submit" class="btn btn-success" ng-click="chefCtrl.updateEvent(chefCtrl.event);">Update Event</button>​​
     </div>​
+  </div>
 </form>​
+</div>
+</div>
 </div>
 </div>
 </div>

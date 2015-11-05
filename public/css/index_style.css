@@ -1,12 +1,21 @@
+#mainpage {
+  background-image: url(http://beautistas.wpengine.netdna-cdn.com/wp-content/uploads/2015/10/beautistas-l%C3%A9gumes.jpg);
+  background-size: cover;
+}
 #indexPage{
     background-image: url("http://www.viralthread.com/wp-content/uploads/2015/06/843.jpg");
     background-size: 100% 70%;
     background-repeat: no-repeat;
+    height: 800px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .chefPage{
     background-image: url(http://sharethisnow.co/wp-content/uploads/2015/05/investigar.jpg);
-    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 800px;
 }
 
 .chef_layer{
@@ -24,15 +33,20 @@
 }
 
 .dinerPage{
-    background-image: url(http://i.ytimg.com/vi/oRmpxPwJFw8/maxresdefault.jpg);
+      background-image: url(http://i.ytimg.com/vi/oRmpxPwJFw8/maxresdefault.jpg);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      margin-top: -30px;
+      height: 800px;
 }
 
 .diner_layer{
     background-color: lightgray;
-    height: 510px;
+    height: 380px;
     width: 350px;
     display: inline-block;
     opacity: 0.8;
+    margin-top: 90px;
     border-radius: 20px;
 }
 .diner_reg{
@@ -54,54 +68,62 @@ div.login{
     display: inline-block;
     float: right;
     border-radius: 24px;
-    margin-left: 15px;
-    position: relative;
-    right: 220px;
-    top: 15px;
+    padding: 20px;
+    font-family: serif;
 }
 
 .slogan{
-    font-size: 70px;
-    font-family: gill sans;
+    font-size: 50px;
+    font-family: serif;
 }
 
 .slogan2{
-    font-size: 50px;
-    font-family: gill sans;
+    font-size: 30px;
+    font-family: serif;
 }
 
 .slogan, .slogan2{
-    color: #585858;
+    color: white;
     text-align: center;
+    text-shadow: 1px 1px navy;
+}
+.dinerschef {
+  color:white;
+  font-family: fantasy;
 }
 
+.formtitle {
+  font-family: serif;
+  color: #990033;
+}
 
 #rdiners, #rchefs{
     display: inline-block;
     padding: 6px 12px;
     border-radius: 24px;
-    margin-left: 30px;
-    position: relative;
+    color:white
+    /*position: relative;
     left:400px;
-    top: 15px;
+    top: 15px;*/
 }
-
+#maintitle {
+  text-align: center;
+}
 .slogan{
 margin-top: 100px;
 }
 
-div.main{
-    width:1200px;
-    min-height: 700px;
-    position: relative;
-    right: 15px;
+#toplinks {
+  padding: 20px;
 }
-
-div.desc1{
-    width:1200px;
-    height: 700px;
-    position: relative;
-    right: 15px;
+#back {
+  padding:30px;
+}
+.navbar-brand {
+  font-family: fantasy;
+  font-style: oblique;
+  font-weight: bold;
+  font-size: 30px;
 }
 
 /*EVENTS*/
@@ -111,11 +133,10 @@ div.desc1{
   min-height:100px;
   max-height: 600px;
   margin-top: -20px;
+  padding-bottom: 40px;
 }
-.list{
-  margin-top: 50px;
-}
-label {
+
+#label {
   color: #3399CC;
   text-shadow: 1px 1px black;
 }
@@ -149,11 +170,13 @@ h2 {
 }
 
 .art {
-  max-width: 90%;
-  min-width: 30%;
+  max-width: 350px;
+  min-width: 32%;
   text-align: center;
+  border: 1px dotted gray;
+  background-size:auto;
 }
-h6{
+h7{
   text-align: center;
 }
 .row{
@@ -164,22 +187,18 @@ h6{
   font-size: 20px;
   color:#0099CC;
 }
-a {
+.bname {
   color:#993366;
 }
 
 /*events page*/
 /*EVENTS PAGE*/
-div.container{
-    width:1200px;
-    min-height: 1000px;
-}
 div.top_bar{
     height: 60px;
     width: 100%;
     background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwwNDA0MDAwMDAwMDAwMDAwMDA8MDAwMFBEWFhQRFBQYHCggGBolHBQUITEhMSk3Li4uFx8zODMsNygtLisBCgoKDAwNDgwMDjcZFBkrLisrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIALEBHAMBIgACEQEDEQH/xAAZAAADAQEBAAAAAAAAAAAAAAAAAQIDBQf/xAAxEAEBAQABAQMHDAMAAAAAAAAAARECAwUGIRIxMnKTsdIEQUJRU1RhgZKy0eEUFiP/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDyKLiIuNIqKiYYKi4iLgioqJi4CuK4mKgNOLTiy4tYouLiIqA0iozi4qLlPUSnoHaVGkBUsWm0EVnyXaz5IqbUcqdRQTUVVTUC1PIzoMqz5NeUZ2AzqK1sRRUVKqkBFRMVAXDiYqAqLiIuCLi4iLgKi4mLgK4tIzi5VFxURKqUFxURKYLlPUaeqLgRo0RVqbSvJF5Cnaz5UWotQFRTtTaCamqqagQBUBWdO1HKgnkzqqiilUKIAcCoAioIcBUVCioIri0kRxXAXIouJqKioiLgKipUHKC9PUHoL0ajRoL0vKTam0FXkm1OlaB2ptK1NoHanStTagq1NK0tAaVotToFUVVRQTU1VSKmg6ABwjBUVExUEVFRMVAXxaRnFwGkVESrlUVIpMPQMJ0aC9Go09A9Gp0aCtK1OjQFqdFqdA7U2i1NqAtK0tK0BaVpaVoDRpWp0FVFGlaCaBaWighoAzhHAOLiDlEWqJioC4qIlVAXKuVlKuUGsotTpaoenKi0SgvRqdGgrRqdLQXaWp0tA7U2i1NqB2ppWlaApFpWgNK0rU2gdpaVqbRT0rS0tA6RADGkAUZAFHEmC5V6ylVoi5VysdaSguVcrKVcBrpJ0aBgtEA9GlaWgrS1NpaC9LU6m0FWlpanQO0tLSoHpWlU2gdpWlpaKdTQQAgQAwABGAMaQAziTBY1OmByr41mqUGsq5WUp+UI10tTOQtBpKbOVWgdqdFqbQPRqdLygVpanS0FaVqdLQXpVOjQFKnU0UECACgARGAIAADIAYAAjKkCtGkAXo1JguU9Z6qUFaepANJyPymeiUGmlqdGiHaWi1NFPRpFoHS0tID0anRoK0anRoHSBAZkAAAAEAAAMAZGBUjwYBA8PAIwAAgAGNBArS0iBenrM9BelanS0Fam0tAHpaCAyAAAADBADAAAyAAAAAAC8BgCwYYAsCgCRisICJQwEg7CAgZAAAAIwBAyAQyGgKRkAAAAAgMyAGCMAAAABgsyAGCAGCMAAWgYhDQOpPSoERkAAAAEAMFoAAgABBAAAAAABwhuAdDr8e7HaFkv+PmyXOXW6PG5ZvjLy8DvdftH7vPb9H4gccOt/rPy/wCx4+36Pxfgc7s9oXxnQ42eHm6/R+fzfSByZQ607s9oXLOhLLNn/fo+M/Uvj3V7Ss2fJtn1zrdGz9yjlEAAAAAwABAAAAAKgAKVAAgAAIwAIAAQCAAAAAAAAAT1fR5erfcQB7f0/Rnq8fcrj5r+QAH/AAn+gAMwAf/Z);
 }
-#leave{
+/*#leave{
     display: inline-block;
     float: right;
     border-radius: 24px;
@@ -187,49 +206,64 @@ div.top_bar{
     position: relative;
     right: 220px;
     top: 15px;
-}
+}*/
 .head_pic{
-    height: 180px;
-    width: 100%;
-}
-.left_bar{
-    margin: 10px;
-    padding: 10px;
-    width: 270px;
-    height: 600px;
-    display: inline-block;
-    vertical-align: top;
-}
-.content{
-    margin: 10px;
-    padding: 10px;
-    width: 850px;
-    height: 600px;
-    display: inline-block;
-}
-.chef_pic{
-    width: 240px;
-    height: 220px;
-    margin-left: 5px;
-    margin-top: 5px;
-    outline: 2px solid black
-}
-.chef_pic img {
-    width: 240px;
-    height: 220px;
+    /*max-width: 100%;*/
+    height: 150px;
+    background-image: url(http://vinepair.com/wp-content/uploads/2015/04/wine-memories-rome-header.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    font-size: 30px;
+    color:#339999;
+    text-shadow: 1px 1px white;
+    text-align: center;
+    font-weight: bold;
 
 }
+.footer_pic{
+    max-width: 100%;
+    min-height: 150px;
+    background-image: url(http://vinepair.com/wp-content/uploads/2015/04/wine-memories-rome-header.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+#left_bar{
+  text-align: center;
+  border: 1px solid gray;
+  /*padding:10px;*/
+
+}
+#main {
+  border: 1px solid gray;
+}
+
+.chef_pic{
+
+    height: 220px;
+    margin-top: 5px;
+    outline: 2px solid black;
+    background-repeat: no-repeat;
+    background-position: center;
+    /*background-attachment: fixed;*/
+    background-size: contain;
+    /*background-size: 100% auto;*/
+}
+#googleMap {
+  height: 250px;
+}
 .chef_info{
-    width: 240px;
+    /*width: 240px;*/
     height: 320px;
-    margin-left: 5px;
+    /*margin-left: 25px;*/
     margin-top: 30px;
     outline: 2px solid black;
     background-image: url(http://1942design.com/graphics/paper.jpg);
 }
 .chef_info h3{
     text-align: center;
-    padding-top:10px;
+    /*padding-top:10px;*/
     color: #993366;
 }
 .chef_info h4{
@@ -238,58 +272,49 @@ div.top_bar{
 }
 .chef_info p{
     margin-top: 10px;
-    display: inline-block;
-    margin-left: 40px;
+    /*display: inline-block;*/
+    /*margin-left: 40px;*/
+    text-align: center;
     font-family: fantasy;
     font-size: 20px;
 }
 .chef_block{
     background-color: black;
-    height:46px;
-    width: 240px;
+    height:50px;
+    /*width: 240px;*/
 }
 .name_block, .location_block, .specialty_block{
     background-color: lightgray;
     height: 30px;
-    width: 240px;
+    /*width: 240px;*/
 }
 .event_detail, .event_detail h3{
     height: 50px;
-    width: 850px;
-    display: inline-block;
-    vertical-align: top;
+    /*max-width: 850px;*/
+    /*display: inline-block;*/
+    /*vertical-align: top;*/
 }
 .event_detail{
-    position: relative;
-    right: 10px;
-    bottom: 10px;
     background-color: black;
 }
 .event_detail h3{
     color: #993366;
-    margin-left: 10px;
-    margin-top: 10px;
+    padding: 10px;
 }
-.event_pic{
-    width: 400px;
-    height: 250px;
-    float: right;
-    margin-top: 7px;
-    margin-right: 5px;
-    display: inline-block;
-    vertical-align: top;
+.eventPic{
+    max-width: 350px;
+    min-height: 200px;
+    border: 1px dotted gray;
 }
 .event_info{
-    width: 400px;
     height: 250px;
-    margin-top: 7px;
-    margin-left: 5px;
-    display: inline-block;
-    vertical-align: top;
-    padding: 10px;
+    padding-top: 20px;
+    /*padding-right: 225px;*/
     outline: 1px solid black;
     text-align: center;
     background-image: url(http://www.castlehillinn.com/images/header-foodwine.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .event_info h5{
     margin-left: 25px;
@@ -297,16 +322,11 @@ div.top_bar{
 }
 .event_info h4{
   color: #0099CC;
-text-shadow: 1px 1px navy;
+  text-shadow: 1px 1px navy;
 }
 .event_price{
-    width: 400px;
     height: 250px;
-    margin-top: 7px;
-    margin-left: 5px;
-    display: inline-block;
-    vertical-align: top;
-    padding: 10px;
+    padding-top: 7px;
     text-align: center;
     outline: 1px solid black;
     background-image: url(http://www.restaurants-chefs.com/wp-content/uploads/2012/01/03Carpaccio-cepes.jpg);
@@ -325,20 +345,17 @@ div.event_price button{
     font-size: 24px;
 }
 .events_background{
-  background-image: url(http://www.webdesignburn.com/wp-content/uploads/2015/04/Grey-Texture-Background-and-Wallpaper-16.jpg);
+  background-image: url(http://www.latablavero.com/wp-content/uploads/2014/09/Light-Wood-Background.jpg);
 }
-.event_capacity{
-    width: 400px;
+#event_capacity{
     height: 250px;
-    float: right;
-    margin-top: 7px;
-    margin-right: 5px;
-    display: inline-block;
-    vertical-align: top;
+    text-align: center;
+    padding-top: 10px;
     outline: 1px solid black;
     background-image: url(http://res-5.cloudinary.com/eatwith/image/upload/c_fill,f_auto,h_245,q_90,w_409/v1/user_073058/image_3_1429358192.jpg);
+    /*background-repeat: no-repeat;*/
 }
-.event_capacity h4{
+#event_capacity h4{
 color: white;
 font-size: 20px;
 font-family: fantasy;
@@ -356,86 +373,57 @@ text-decoration: underline;
   width: 100%;
       vertical-align: center;
 }
+.dashboard {
+  color: #660033;
+  font-family: serif;
+  font-weight: bold;
+}
+#welcomedash {
+  font-family: cursive;
+}
   .container{
-      width:1200px;
-      min-height: 1000px;
+      /*width:1200px;*/
+      min-height: 500px;
   }
-div.head_bar{
+div#head_bar{
       height: 60px;
-      width: 100%;
-      background-color: black;
+      /*width: 100%;
+      background-color: black;*/
   }
-  div.head_bar h1{
+  div#head_bar h1{
     display: inline-block;
     color: white;
     padding: 5px;
-    margin-left: 200px;
-    margin-top: 7px;
   }
-  #create_new {
-    margin-top: 15px;
-  }
+
   #leaving{
       display: inline-block;
-      float: right;
       border-radius: 24px;
       margin-left: 15px;
-      position: relative;
-      right: 360px;
-      top: 15px;
   }
   div.bio_location{
-      background-color: white;
-      opacity: 0.85;
-      border-radius: 20px;
-    height: 400px;
-    width: 700px;
-    margin-left: 20px;
-    margin-top: 30px;
-    display: inline-block;
-    vertical-align: top;
-      padding-left: 20px;
+    border: 1px solid gray;
+  padding-left: 20px;
   }
   .loc{
     margin-left: 30px;
     display: inline-block;
   }
-  #clicker{
-    margin-left: 400px;
-      position: relative;
-      bottom:  40px;
-  }
   .affirm{
     margin-left: 30px;
   }
-  .bio_spot{
+  #bio_spot{
     border-radius: 15px;
     border: 2px solid black;
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 30px;
+    width: auto;
+    margin-left: 10px;
   }
-  div.upcoming{
-      background-color: white;
-      opacity: 0.85;
-      border-radius: 20px;
-    width: 400px;
-    height: 400px;
-    float: right;
-    margin-top: 30px;
-    margin-right: 20px;
-    border-radius: 15px;
-    padding-left: 15px;
-      padding-right: 15px;
-      padding-top: 5px;
-  }
+
   div.upcoming a{
-      margin-top: 150px;
-      margin-left: 110px;
+    font-size: 18px;
+    text-shadow: 1px 1px black;
   }
-  div.eventList{
-      margin-top: 30px;
-  }
+
   div.message_board{
       background-color: white;
       opacity: 0.8;

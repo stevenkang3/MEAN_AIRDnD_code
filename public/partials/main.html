@@ -10,34 +10,43 @@
 <nav class="navbar navbar-inverse" id='navigation' role='navigation'>
   <div class="container-fluid">
     <div class="navbar-header" ng-controller='ChefController as chefCtrl'>
-      <a class="navbar-brand" href="#"><div class='row'><h3 id='diner'>Welcome <span>{{chefCtrl.chef.first_name}}</span></h3></div></a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href=""><div class='row'><h3 class='animated rubberBand' id='diner'>Welcome <span>{{chefCtrl.chef.first_name}}</span></h3></div></a>
     </div>
-    <div>
-      <ul id='list' class="nav navbar-nav">
-        <!-- <li class="active"><a href="#">Home</a></li> -->
-        <li class='list'><a href=''><input ng-model="search.$" class="glyphicon glyphicon-star" placeholder=' Search'><button type='button' class='btn btn-xs btn-primary'>Filter</button></a></li>
-        <li class='list'><a href=""><label>Chef: <select ng-model="search.name" >
-						<option ng-repeat='chef in appCtrl.chef' ng-bind='chef'>{{chef}}</option></select></label></a></li>
-        <li class='list'><a href=""><label>Cuisine Type: <select  ng-model="search.cuisine" >
-					<option ng-repeat='cuisine in appCtrl.cuisine' ng-bind='cuisine'>{{cuisine}}</option>
-				</select></label></a></li>
-        <li class='list'><a href="">	<label>Location: <select ng-model="search.location">
-							<option ng-repeat='location in appCtrl.location' ng-bind='location'>{{location}}</option><select></label></a></li>
-								<li class='list'><a href="">	<button class='btn btn-primary' ng-click='appCtrl.reset()'>Show All</button></a></li>
-		  </ul>
-    </div>
-  </div>
-</nav>
 
-		<!-- <a class='col-xs-4 pull-right' href="./#/new_app">Add New Event</a>​ -->
-<div class='container'>
-	<div class='intro' ng-repeat="app in appCtrl.apps | filter: search:strict | orderBy: 'date'">
-	   <div class='col-md-4'>
-	      <div class='row'>
-    		<h5>Creations of: <a class='name'>Chef {{app.name}}</a></h5>
-    		<img class='art' src="{{app.url}}" alt="" />
-    		<h4><a class='bname' href="#/one_event/{{app._id}}">{{app.title}}: {{app.cuisine}} / ${{app.price}}</a><h6>{{app.date | date:'mediumDate'}} at {{app.time | date: 'shortTime'}}</h6></h4>
-	 </div>
-	 </div>
-	</div>
-</div>
+
+      <a id='back' class='pull-right' href="/#/">Log Out</a>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul id='list' class="nav navbar-nav">
+        <li class='list'><a href=''><label id='label'> Search: </label><input class='form-control input-sm' ng-model="search.$" class="glyphicon glyphicon-star" placeholder='Filter'><span class="sr-only">(current)</span></a></li>
+        <li class='list'><a href=""><label id="label">Chef: </label><select class='form-control input-sm' ng-model="search.name" >
+          <option ng-repeat='chef in appCtrl.chef' ng-bind='chef'>{{chef}}</option></select></a></li>
+          <li class='list'><a href=""><label id="label">Cuisine Type: </label><select  class='form-control input-sm' ng-model="search.cuisine" >
+            <option ng-repeat='cuisine in appCtrl.cuisine' ng-bind='cuisine'>{{cuisine}}</option>
+          </select></a></li>
+          <li class='list'><a href="">	<label id="label">Location:</label> <select class='form-control input-sm' ng-model="search.location">
+            <option ng-repeat='location in appCtrl.location' ng-bind='location'>{{location}}</option><select></a></li>
+              <li class='list'><a href="">	<button class='btn btn-primary' ng-click='appCtrl.reset()'>Show All</button></a></li>
+            </ul>
+          </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- <a class='col-xs-4 pull-right' href="./#/new_app">Add New Event</a>​ -->
+      <div class='container'>
+        <div class='intro' ng-repeat="app in appCtrl.apps | filter: search:strict | orderBy: 'date'">
+          <div class='col-xs-12 col-sm-6 col-md-4 col-lg-4'>
+            <div class='row'>
+              <h5>Creations of: <a class='name'>Chef {{app.name}}</a></h5>
+              <img class='animated rotateIn art' src="{{app.url}}" alt="" />
+              <h4><a class='bname' href="#/one_event/{{app._id}}">{{app.title}}: {{app.cuisine}} / ${{app.price}}</a><br><h6>{{app.date | date:'mediumDate'}} at {{app.time | date: 'shortTime'}}</h6></h4>
+            </div>
+          </div>
+        </div>
+      </div>

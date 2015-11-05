@@ -1,15 +1,22 @@
+<style media="screen">
+  body{
+    margin-top: -20px;
+  }
+</style>
 <div id="indexPage">
     <div class='head'>
-        <button id='ldiners' class= 'btn btn-success'><a href="#/diner_login">Login Diner</a></button>
-        <button id='lchefs' class="btn btn-success"><a href="#/chef_login">Login Chef</a></button>
+        <a class='navbar-brand' href="#">airDnD</a>
+        <a id='ldiners'  style='color: white'; class= '' href="#/diner_login">Login Diner</a>
+        <a id='lchefs'  style='color: white'; class="" href="#/chef_login">Login Chef</a>
     </div>
 
     <div class='container'>
-        <div class='main'>
-            <h1 class= 'slogan'>Come Home for Dinner</h1>
+          <div class='row'>
+            <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12' id='maintitle'>
+            <h1 class='slogan'>Come Home for Dinner</h1>
             <h2 class='slogan2'>New tastes served locally</h2>
-            <button id='rdiners' class= 'btn btn-success btn-lg'><a href="#/diner_registration">Register Diner</a></button>
-              <button id='rchefs' class="btn btn-success btn-lg"><a href="#/chef_registration">Register Chef</a></button>
+            <button id='rdiners' class= 'btn btn-primary btn-lg'><a class='dinerschef' href="#/diner_registration">Register Diner</a></button>
+            <button id='rchefs' class="btn btn-primary btn-lg"><a class='dinerschef' href="#/chef_registration">Register Chef</a></button>
         </div>
     </div>
 </div>

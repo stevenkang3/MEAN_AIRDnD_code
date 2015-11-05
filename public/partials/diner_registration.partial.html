@@ -1,10 +1,10 @@
 <div class='dinerPage'>
-    <h4 style='color: gray;'>Register | <a href='#/diner_login'>Login</a></h4>
+    <h4 id='toplinks' style='color: gray;'>Register | <a href='#/diner_login'>Login</a></h4>
 
     <div class='container'>
         <div class='diner_layer'>
           <div class='diner_reg'>
-              <h2>Diner Registration</h2>
+              <h2 class='formtitle'>Diner Registration</h2>
                   <p>Already a member? Login <a href="#/diner_login">here</a></p>
               <form>
                       <div class='form-group'>
@@ -32,5 +32,6 @@
                       <button type='submit' ng-click='dinerCtrl.addDiner(newDiner);'>Register</button>
               </form>
           </div>
+            <a id='back' class='pull-right' href="/#/">Back to Main Page</a>
         </div>
     </div>

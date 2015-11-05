@@ -4,34 +4,55 @@
 			width: 409px;
 	}
 </style>
-<div class='head_bar'>
-					<h1>Welcome! Let's get cookin'!</h1>
-							<button id='leaving' class= 'btn btn-danger'><a href="/"></a>Logout</button>
-							<a class='btn btn-info pull-right' id='create_new' href='#/newEvent'>Create New Event</a>
-			</div>
-	<div class='container'>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+      <a class="navbar-brand" id='welcomedash' href="#">
+        Welcome! Let's get cookin'!
+      </a>
+			<ul class="nav navbar-nav pull-right">
+        <li class="active"><a  href='#/newEvent'><span class="glyphicon glyphicon-pencil"></span> Create an Event<span class="sr-only">(current)</span></a></li>
+        <li id='create_new'><a href="/#/"><span class="glyphicon glyphicon-off"></span> Log Off</a></li>
+      </ul>
+  </div>
+</nav>
 
-		<div class="bio_location">
-			<form>
-				<h3>Enter a Profile Biography:</h3>
-				<p><textarea class='bio_spot' ng-model='chefCtrl.chef.bio' rows='8' cols='70'>{{ chefCtrl.chef.bio }}</textarea></p>
-				<h4>Location:</h4>
-				<p><input class='loc' type='text' ng-model='chefCtrl.chef.location'/></p>
-				<p><input id='clicker' type='submit' class='btn btn-success' value='Save Changes' ng-click='chefCtrl.updateInfo(chefCtrl.chef)' />
-				<h4 class='affirm' ng-show='chefCtrl.save == true' style='color: blue;'>Changes saved</h4>
 
-				</p>
-			</form>
-		</div>
-		<div class='upcoming'>
-			<h3>Your upcoming events:</h3><hr>
-			<div class='eventList' ng-repeat='event in chefCtrl.events | orderBy: "date"'>
-				<img class='eventPic' src='{{ event.url }}' alt='1'>
-				<p><a href='#/chef_one_event/{{ event._id }}'>{{ event.title }}</a></p>
-				<p> - {{ event.location }} || {{ event.date | date }} -
-				<button class='btn btn-xs btn-danger pull-right' ng-click='chefCtrl.destroy(event)'>delete event</button></p>
-			</div>
+<div class='container'>
+	<div class='row'>
+			<div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
 
+				<div class='row'>
+					<div class='col-xs-12 col-sm-8 col-md-8'>
+						<div class="bio_location">
+							<form>
+								<h3 class='dashboard'>Enter a Profile Biography:</h3>
+								<p><textarea id='bio_spot' class="form-control" ng-model='chefCtrl.chef.bio' rows='8' cols='40'>{{ chefCtrl.chef.bio }}</textarea></p>
+								<h4>Location:</h4>
+								<p><input class='loc' type='text' ng-model='chefCtrl.chef.location'/></p>
+								<p><input id='clicker' type='submit' class='btn btn-success pull-right' value='Save Changes' ng-click='chefCtrl.updateInfo(chefCtrl.chef)' />
+									<h4 class='affirm' ng-show='chefCtrl.save == true' style='color: blue;'>Changes saved</h4>
+								</p>
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<div class='row'>
+					<div class='col-xs-12 col-sm-8 col-md-8'>
+						<div class='upcoming'>
+							<h3 class='dashboard' >Your Upcoming Events:</h3>
+							<div class='col-xs-12 col-sm-6 col-md-6' ng-repeat='event in chefCtrl.events | orderBy: "date"' id='upcoming'>
+								<img class='animated rotateIn eventPic' src='{{ event.url }}' alt='1'>
+								<p><a href='#/chef_one_event/{{ event._id }}'>{{ event.title }}</a></p>
+								<p style="font-weight: bold"><a href=""> - {{ event.location }} || {{ event.date | date }} - </a>
+									<button class='btn btn-xs btn-danger' ng-click='chefCtrl.destroy(event)'>Delete</button></p>
+								</div>
+							</div>
+						</div>
+					</div>
+	</div>
+	</div>
+	</div>
 			<!-- </div> -->
 <!--         <div class='message_board'>
 							<h3>See what people are saying about you!</h3>
@@ -42,5 +63,3 @@
 							<textarea ng-model= 'newMessage.message' rows='6' cols='80'></textarea>
 							<input class='btn btn-success' type='submit' value='Post a Review'>
 			</div> -->
-	</div>
-</div>

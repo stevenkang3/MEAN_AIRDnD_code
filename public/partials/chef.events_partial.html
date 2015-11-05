@@ -1,75 +1,106 @@
 <style media="screen">
-  .des {
+  h2.des {
     color:#660033;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 30px;
     font-family: serif;
   }
+
 </style>
   <div class='events_background'>
         <div class='top_bar'>
-          <a href="#/chef_dashboard">Back to Chefs Mainpage</a><br>
-
+          <a id='toplinks'href="#/chef_dashboard">Back to Chefs Mainpage</a><br>
         </div>
 
-        <div class="container">
-            <div class='head_pic'>
-                <img src="http://www.burwellscharleston.com/images/headers/Indoor-Dining-Header-top.jpg" width='100%' height='100%'>
+<div class="container" id='contains'>
+        <div class='row'>
+          <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+
+            <div class='row'>
+                <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+              <div class='head_pic'></div>
+              <!-- <img src="http://www.burwellscharleston.com/images/headers/Indoor-Dining-Header-top.jpg" width='100%' height='100%'> -->
+            </div>
             </div>
 
-            <div class='left_bar'>
-                <div class='chef_pic'>
-                    <img src="{{ chefCtrl.event.pic}}">
-                </div>
-                <div class='chef_info'>
-                    <div class='chef_block'>
-                        <h3>Meet Your Chef!</h3>
+            <div class='row'>
+<div class='col-xs-12 col-sm-3 col-md-3 col-lg-3' id='left_bar'>
+                  <div class='left_bar'>
+                    <div class='chef_pic' style='background-image:url({{ chefCtrl.event.pic}})'>
+                      <!-- <img src="{{ chefCtrl.event.pic}}"> -->
                     </div>
-                        <div class='name_block'>
-                            <h4>Chef Name:</h4>
-                        </div>
-                            <p>{{ chefCtrl.chef.first_name}}</p>
-                        <div class='location_block'>
-                            <h4>Chef Location:</h4>
-                        </div>
-                            <p>{{ chefCtrl.chef.location }}</p>
-                        <div class='specialty_block'>
-                            <h4>Chef Specialty:</h4>
-                        </div>
-                            <p>{{ chefCtrl.event.cuisine }}</p>
-                </div>
-            </div>
+                    <div class='chef_info'>
+                      <div class='chef_block'>
+                        <h3>Meet Your Chef!</h3>
+                      </div>
+                      <div class='name_block'>
+                        <h4>Chef's Name:</h4>
+                      </div>
+                      <p>{{ chefCtrl.event.name}}</p>
+                      <div class='location_block'>
+                        <h4>Chef's Location:</h4>
+                      </div>
+                      <p>{{ chefCtrl.chef.location }}</p>
+                      <div class='specialty_block'>
+                        <h4>Chef's Specialty:</h4>
+                      </div>
+                      <p>{{ chefCtrl.event.cuisine }}</p>
+                    </div>
+                  </div>
+</div>
 
-            <div class='content'>
-                <div class='event_detail'>
-                    <h3><a class='pull-center' href="#/chef_event_edit/{{chefCtrl.event._id}}">[ Edit ]</a> Event Details - {{chefCtrl.event.title}}</h3>
-                </div>
-                <div class='event_info'>
-                    <h4>Event Date:</h4>
-                      <h5>{{ chefCtrl.event.date | date }}</span></h4>
-                    <h4>Event Time: </h4>
-                      <h5>{{ chefCtrl.event.time | date: 'shortTime' }}</h5>
-                    <!-- <h4>time: <span class='des'>{{ chefCtrl.event.time | date: mediumTime }}</span></h4> -->
-                    <h4>Menu Item:</h4>
-                        <h5>{{ chefCtrl.event.menu }}</h5>
-                </div>
-                <div id="googleMap" style="width:400px;height:250px;" class='event_pic'>
+<div class='col-xs-12 col-sm-9 col-md-9 col-lg-9' id='middle'>
+  <div class='row'>
+    <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+      <div class='event_detail'>
+        <h3><a class='animated shake pull-center' href="#/chef_event_edit/{{chefCtrl.event._id}}">[ Edit ]</a> {{chefCtrl.event.title}}</h3>
+      </div>
+    </div>
+  </div>
 
-                </div>
+  <div class='row'>
+    <div class='col-xs-12 col-sm-6 col-md-6 col-lg-6' >
+      <div class='event_info'>
+        <h4>Event Date:</h4>
+        <h5>{{ chefCtrl.event.date | date }}</span></h4>
+          <h4>Event Time: </h4>
+          <h5>{{ chefCtrl.event.time | date: 'shortTime' }}</h5>
+          <!-- <h4>time: <span class='des'>{{ chefCtrl.event.time | date: mediumTime }}</span></h4> -->
+          <h4>Menu Item:</h4>
+          <h5>{{ chefCtrl.event.menu }}</h5>
+        </div>
+      </div>
+
+      <div class='col-xs-12 col-sm-6 col-md-6 col-lg-6'>
+        <div id="googleMap" class='event_pic'><a id='location'href="">Location</a></div>
+      </div>
+    </div>
+
+            <div class='row'>
+              <div class='col-xs-12 col-sm-6'>
                 <div class ='event_price'>
                     <h4 class='des'>Event Description</h4>
                     <h4>{{chefCtrl.event.description}}</h4>
-                    <h1 class='des'> ${{ chefCtrl.event.price }} /per guest</h1>
+                    <h2 class='des'> ${{ chefCtrl.event.price }} /per guest</h2>
+                    <a href="">Reserve Your Seat</a>
                 </div>
-                <div class='event_capacity'>
+                </div>
+
+                  <div class='col-xs-12 col-sm-6'>
+                <div id='event_capacity'>
                     <h4>People Going</h4>
                 </div>
+              </div>
+              </div>
 
             </div>
             <hr>
-
+            <div class='footer_pic'></div>
+                <br><br><br><br><br>
+                      <div class='footer_pic'></div>
         </div>
-        <a href='#/chef_dashboard'>Go back</a>
+        <!-- <a href='#/chef_dashboard'>Go back</a> -->
     </div>
-
-</body>
+    </div>
+    </div>
+    </div>
