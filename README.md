@@ -9,7 +9,7 @@ MEAN_Stack_AirDnD
 <p> Email: steven@aol.com</p>
 <p> password: airdnd </p>
 
-<h4> or experience the site as a chef and click on Login Chef</p>
+<h4> or experience the site as a chef and click on Login Chef</h4>
 <p>Same email and password as Diner</p>
 <p>ENJOY!</p>
 <a href='52.10.219.92'>www.airdnd.xyz</a>
